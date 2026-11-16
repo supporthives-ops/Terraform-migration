@@ -6,7 +6,7 @@ resource_group_name    = "Terraform-testserver"
 
 vm_name                = "della-staging-azure"
 
-default                = "Standard_D4_v5"
+default                = "Standard_D2s_v3"
 
 admin_username         = "azureadmin"
 
