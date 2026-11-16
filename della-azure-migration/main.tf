@@ -14,12 +14,13 @@ resource "azurerm_virtual_network" "main" {
   tags                = var.tags
 }
 
-# Subnet
+
+
 resource "azurerm_subnet" "app" {
   name                 = "snet-app"
   resource_group_name  = azurerm_resource_group.main.name
   virtual_network_name = azurerm_virtual_network.main.name
-  address_prefixes     = var.subnet_address_prefixes
+  address_prefixes     = ["10.40.1.0/24"]
 }
 
 # Network Security Group
