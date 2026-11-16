@@ -1,0 +1,10 @@
+subscription_id         = "00000000-0000-0000-0000-000000000000"
+location                = "westindia"
+resource_group_name     = "rg-della-migration"
+vm_name                 = "della-staging-azure"
+vm_size                 = "Standard_D4s_v5"
+admin_username          = "azureadmin"
+admin_ssh_public_key    = "ssh-ed25519 REPLACE_WITH_YOUR_PUBLIC_KEY"
+ssh_source_cidr         = "REPLACE_WITH_YOUR_PUBLIC_IP/32"
+data_disk_size_gb       = 512
+enable_openvpn_ingress  = false
