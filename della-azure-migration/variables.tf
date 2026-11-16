@@ -1,3 +1,4 @@
+```hcl
 variable "subscription_id" {
   description = "Azure subscription ID"
   type        = string
@@ -12,7 +13,7 @@ variable "location" {
 variable "resource_group_name" {
   description = "Azure resource group name"
   type        = string
-  default     = "Terraform-testserver"
+  default     = "rg-della-migration"
 }
 
 variable "vm_name" {
@@ -58,19 +59,19 @@ variable "enable_openvpn_ingress" {
 variable "vnet_address_space" {
   description = "Virtual network address space"
   type        = list(string)
-  default     = ["10.0.0.0/16"]
+  default     = ["10.40.0.0/16"]
 }
 
 variable "subnet_address_prefixes" {
   description = "Application subnet address prefixes"
   type        = list(string)
-  default     = ["10.0.1.0/24"]
+  default     = ["10.40.1.0/24"]
 }
 
 variable "tags" {
   description = "Tags applied to Azure resources"
   type        = map(string)
-  default     = {
+  default = {
     project     = "della-azure-migration"
     environment = "staging"
     managed_by  = "terraform"
