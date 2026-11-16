@@ -77,3 +77,4 @@ variable "tags" {
     managed_by  = "terraform"
   }
 }
+
