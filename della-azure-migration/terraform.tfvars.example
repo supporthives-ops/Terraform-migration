@@ -1,23 +1,25 @@
 subscription_id        = "1f9eeadb-6e20-4072-9850-ff8a92047e1d"
 
 location               = "westindia"
-resource_group_name    = "rg-della-migration"
+
+resource_group_name    = "Terraform-testserver"
 
 vm_name                = "della-staging-azure"
-vm_size                = "Standard_D4s_v3"
+
+default                = "Standard_D4_v5"
 
 admin_username         = "azureadmin"
 
-admin_ssh_public_key   = "ssh-ed25519 REPLACE_WITH_YOUR_ACTUAL_PUBLIC_KEY"
+admin_ssh_public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDhAkEqJI3Qbao8KYcaa31cMoVArFO3Sy4zM0DPct0vzjMC0srqSoD5cklYUenVY77aNVi/Wrcau4XZk95OgWRL5jSPzWiQIMDYnwEa8GS38L9X1HbzcEHz4rfjSXAm/UJcN/N3B5DoQHG1/Lqw1bsNxlG664y/PagduKcoe4aJGRX8JhqlTlWJceo1Gmbku4f5rTfgFlAHYiLpXjvA6uR6vwkqD6zKdB5ShbO3ni6Va1KhyKO4otiapIdVUowdB/CJXJb7FOrvrainpIcDAXq2g0N5N3qudnlDAaxTAaTzY485/Qy5J2zTuI/qN20nAEe8QdQTi5x+PxjUIdpXw9TIcJzMMF0z+z5X0xvay5ERv9ai8CCu0SDzUsDlbK10Bc+znIOOr9ca0zzKGDIZ6e8kC4m0ownDEl+HrTikZgoJlIP24oNsci2oRHTY/w7/Te5RGu9tRT4/3bDCQhh0L9UswrHvMuUIMH7r4EQcRQV3wztd2ozO/tziLCjmqoXUTKg4vQw8D+qw4BE8dls5mU5IAMyaUcWzeacIYbor/5y++uE+1+WgcoV+GpE6JVdsSvJxLIWgxAYBAX9nXDX5tMWpBKqLSAsRy7PjcF8+VwtOM/HyzKOZxRZkMLY26piTWQ95T04C0yC5QqSB0swHAgAssAxvg4HOhTW/AJ2CzGA2Xw== azureuser@Terraform"
 
-ssh_source_cidr        = "REPLACE_WITH_YOUR_PUBLIC_IP/32"
+ssh_source_cidr = "74.235.204.172/32"
 
 data_disk_size_gb      = 512
 
 enable_openvpn_ingress = false
 
-vnet_address_space       = ["10.0.0.0/16"]
-subnet_address_prefixes  = ["10.0.1.0/24"]
+vnet_address_space      = ["10.40.0.0/16"]
+subnet_address_prefixes = ["10.40.1.0/24"]
 
 tags = {
   environment = "staging"
